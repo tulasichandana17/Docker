@@ -1,5 +1,5 @@
 # Use Java 11 as the base image
-FROM openjdk:11-jdk-slim
+FROM eclipse-temurin:11-jdk
 
 # Set working directory
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Compile Java program
-RUN javac Samplename.java
+RUN javac samplename.java
 
 # Run the Java program
-CMD ["java", "Samplename"]
+CMD ["java", "samplename"]
